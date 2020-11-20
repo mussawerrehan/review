@@ -127,6 +127,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kVZz3ftEz3dzcIdh81HkcfXKgh" />
@@ -150,7 +152,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605787979077</updated>
       <workItem from="1605787980985" duration="2978000" />
-      <workItem from="1605791667423" duration="1082000" />
+      <workItem from="1605791667423" duration="3519000" />
     </task>
     <servers />
   </component>
