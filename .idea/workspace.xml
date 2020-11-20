@@ -13,6 +13,12 @@
       <change beforePath="$PROJECT_DIR$/../e-shop/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/config/services.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../e-shop/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../e-shop/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/_form.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +30,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -153,6 +159,7 @@
       <updated>1605787979077</updated>
       <workItem from="1605787980985" duration="2978000" />
       <workItem from="1605791667423" duration="3519000" />
+      <workItem from="1605854185013" duration="4663000" />
     </task>
     <servers />
   </component>
