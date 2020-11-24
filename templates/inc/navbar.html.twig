@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-3">
+    <div class="container">
+        <a href="/home" class="navbar-brand">E-Shop</a>
+        <button class="navbar-toggler" type=""button data-toggle="collapse"
+                data-target="#mobile-nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mobile-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="/home" class="nav-link">Home</a>
+                </li>
+                {% if app.user %}
+                    {% if is_granted("ROLE_SUPERADMIN") %}
+                        <li class="nav-item">
+                            <a href="/user" class="nav-link">Users</a>
+                        </li>
+                    {% endif %}
+                    {% if is_granted("ROLE_ADMIN") %}
+                        <li class="nav-item">
+                            <a href="/review" class="nav-link">Reviews</a>
+                        </li>
+                    {% endif %}
+                    <li class="nav-item">
+                        <a href="/logout" class="nav-link">Logout</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a href="/login" class="nav-link">Login</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
