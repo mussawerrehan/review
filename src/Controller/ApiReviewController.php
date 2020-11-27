@@ -4,12 +4,16 @@ namespace App\Controller;
 
 use App\Entity\Review;
 use App\Repository\ReviewRepository;
+use App\Service\DoctrineHelper;
+use App\Service\TokenHelper;
 use JMS\Serializer\SerializerBuilder;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
+use function MongoDB\BSON\toJSON;
 
 class ApiReviewController extends AbstractController
 {
@@ -26,12 +30,11 @@ class ApiReviewController extends AbstractController
     }
 
     /**
-     * @Route("/api/review", name="api_review_new", methods={"POST"})
+     * @Route("/user/api/review", name="api_review_new", methods={"POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request,DoctrineHelper $doctrineHelper,TokenHelper $tokenHelper): Response
     {
-
-        $em = $this->getDoctrine()->getManager();
+        $user = $tokenHelper->getUserFromToken($request->headers->get('Authorization'));
 
         $star = $request->request->get('star');
         $description = $request->request->get('description');
@@ -39,11 +42,10 @@ class ApiReviewController extends AbstractController
         $review = new Review();
         $review->setStar($star);
         $review->setDescription($description);
-        $review->setUser($request->getUser());
 
-        $em->persist($review);
-        $em->flush();
+        $review->setUser($user);
 
+        $doctrineHelper->AddToDb($review);
         return new JsonResponse(['success' => 'Review Created']);
 
     }
@@ -51,19 +53,17 @@ class ApiReviewController extends AbstractController
     /**
      * @Route("/api/review/{id}/edit", name="api_review_edit", methods={"PUT"})
      */
-    public function edit(Request $request, Review $review): Response
+    public function edit(Request $request, Review $review, DoctrineHelper $doctrineHelper): Response
     {
-        $em = $this->getDoctrine()->getManager();
-
-        $star = $request->request->get('title');
+        // validate the request and user
+        // only alow if sender is same as in db
+        $star = $request->request->get('star');
         $description = $request->request->get('description');
 
         $review->setStar($star);
         $review->setDescription($description);
-        $review->setUser($request->getUser());
 
-        $em->persist($review);
-        $em->flush();
+        $doctrineHelper->AddToDb($review);
 
         return new JsonResponse(['success' => 'Review Updated']);
     }
@@ -82,12 +82,9 @@ class ApiReviewController extends AbstractController
     /**
      * @Route("/api/review/{id}", name="api_review_delete", methods={"DELETE"})
      */
-    public function delete(Review $review): Response
+    public function delete(Review $review, DoctrineHelper $doctrineHelper): Response
     {
-        $entityManager = $this->getDoctrine()->getManager();
-        $entityManager->remove($review);
-        $entityManager->flush();
-
+        $doctrineHelper->DeleteFromDb($review);
         return new JsonResponse(['Success' => 'Record Deleted']);
     }
 }

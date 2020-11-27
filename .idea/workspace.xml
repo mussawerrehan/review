@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c506edc4-d12b-4a1c-9376-103c1cd8988b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Service/DoctrineHelper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/ReviewHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/TokenHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/UserResolveListner.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo/Sblylo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/Sblylo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../e-shop/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../e-shop/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/.gitignore" afterDir="false" />
@@ -15,23 +15,10 @@
       <change beforePath="$PROJECT_DIR$/../e-shop/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/config/services.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../e-shop/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../e-shop/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/review.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/review.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/oauth/private.pem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/oauth/public.pem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ApiReviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ApiReviewController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ReviewApiController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/review_api/index.html.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,13 +169,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/var" />
-      <recent name="$PROJECT_DIR$/src/Coeus/TestBundle" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Service" />
       <recent name="$PROJECT_DIR$/config/oauth" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Service" />
+      <recent name="$PROJECT_DIR$/var" />
+      <recent name="$PROJECT_DIR$/src/Coeus/TestBundle" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -204,7 +192,8 @@
       <workItem from="1605854185013" duration="5893000" />
       <workItem from="1606122632519" duration="7958000" />
       <workItem from="1606215277465" duration="7216000" />
-      <workItem from="1606289295239" duration="13316000" />
+      <workItem from="1606289295239" duration="25487000" />
+      <workItem from="1606462003789" duration="8526000" />
     </task>
     <servers />
   </component>
@@ -212,15 +201,21 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2547" y="254" width="655" height="605" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606200246192">
-      <screen x="0" y="27" width="3840" height="1053" />
+    <state x="3185" y="233" width="655" height="605" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606477173259">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2547" y="254" width="655" height="605" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.3840.1053@0.27.3840.1053" timestamp="1606200246192" />
-    <state x="2234" y="189" width="574" height="697" key="NewPhpClassDialog" timestamp="1606379725569">
+    <state x="1274" y="254" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1606472827207" />
+    <state x="3185" y="233" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1606477173259" />
+    <state x="2234" y="189" width="574" height="697" key="NewPhpClassDialog" timestamp="1606476744959">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="627" y="211" width="655" height="672" key="NewPhpClassDialog/0.27.3840.1053@0.27.3840.1053" timestamp="1606207893773" />
-    <state x="2234" y="189" width="574" height="697" key="NewPhpClassDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1606379725569" />
+    <state x="2234" y="189" width="574" height="697" key="NewPhpClassDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1606476744959" />
+    <state x="726" y="451" width="458" height="185" key="NewPhpFileDialog" timestamp="1606385474369">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="726" y="451" width="458" height="185" key="NewPhpFileDialog/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1606385474369" />
     <state x="2500" y="236" width="766" height="634" key="find.popup" timestamp="1606304465588">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
