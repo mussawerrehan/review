@@ -5,7 +5,9 @@ namespace App\Controller;
 use App\Entity\Review;
 use App\Form\ReviewType;
 use App\Repository\ReviewRepository;
+use App\Service\DoctrineHelper;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -76,6 +78,23 @@ class ReviewController extends AbstractController
             'review' => $review,
             'form' => $form->createView(),
         ]);
+    }
+
+    /**
+     * @Route("/{id}/status", name="update_status", methods={"PUT"})
+     */
+    public function updateStatus(Review $review,DoctrineHelper $doctrineHelper)
+    {
+        if($review->getStatus())
+        {
+            $review->setStatus(0);
+        }
+        else
+        {
+            $review->setStatus(1);
+        }
+        $doctrineHelper->AddToDb($review);
+        return new JsonResponse(['success' => 'Review Updated']);
     }
 
     /**

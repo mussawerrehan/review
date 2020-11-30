@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Review;
 use App\Repository\ReviewRepository;
 use App\Service\DoctrineHelper;
+use App\Service\ReviewHelper;
 use App\Service\TokenHelper;
 use JMS\Serializer\SerializerBuilder;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -32,20 +33,13 @@ class ApiReviewController extends AbstractController
     /**
      * @Route("/api/review", name="api_review_new", methods={"POST"})
      */
-    public function new(Request $request,DoctrineHelper $doctrineHelper,TokenHelper $tokenHelper): Response
+    public function new(Request $request,ReviewHelper $reviewHelper,TokenHelper $tokenHelper): Response
     {
         $user = $tokenHelper->getUserFromToken($request->headers->get('Authorization'));
-
-        $star = $request->request->get('star');
-        $description = $request->request->get('description');
-
         $review = new Review();
-        $review->setStar($star);
-        $review->setDescription($description);
-
         $review->setUser($user);
 
-        $doctrineHelper->AddToDb($review);
+        $reviewHelper->updateReview($request, $review);
         return new JsonResponse(['success' => 'Review Created']);
 
     }
@@ -53,20 +47,13 @@ class ApiReviewController extends AbstractController
     /**
      * @Route("/api/review/{id}/edit", name="api_review_edit", methods={"PUT"})
      */
-    public function edit(Request $request, Review $review, DoctrineHelper $doctrineHelper,TokenHelper $tokenHelper): Response
+    public function edit(Request $request, Review $review, ReviewHelper $reviewHelper,TokenHelper $tokenHelper): Response
     {
         $user = $tokenHelper->getUserFromToken($request->headers->get('Authorization'));
-        // validate the request and user
-        // only alow if sender is same as in db
+
         if ($review->getUser() == $user)
         {
-            $star = $request->request->get('star');
-            $description = $request->request->get('description');
-
-            $review->setStar($star);
-            $review->setDescription($description);
-
-            $doctrineHelper->AddToDb($review);
+            $reviewHelper->updateReview($request , $review);
         }else{
             return new JsonResponse(['failed' => 'you can only change your own review']);
         }

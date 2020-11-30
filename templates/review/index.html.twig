@@ -11,6 +11,7 @@
                 <th>Id</th>
                 <th>Star</th>
                 <th>Description</th>
+                <th>Status</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -20,6 +21,9 @@
                 <td>{{ review.id }}</td>
                 <td>{{ review.star }}</td>
                 <td>{{ review.description }}</td>
+                <td>
+                    <input type="checkbox" {% if review.status %}checked{% endif %}
+                           onclick="statusChange({{ review.id }})"></td>
                 <td>
                     <a href="{{ path('review_show', {'id': review.id}) }}">show</a>
                     <a href="{{ path('review_edit', {'id': review.id}) }}">edit</a>
