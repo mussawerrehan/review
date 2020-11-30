@@ -1,13 +1,13 @@
 trikoder_oauth2:
 
     authorization_server:
-        private_key: '/home/coeus/projects/review/var/oauth/private.key'                     # Change this
-        private_key_passphrase: college                            # Passphrase of the private key, if any
+        private_key: '/home/coeus/projects/review/var/oauth/private.key'
+        private_key_passphrase: college
 
-        encryption_key: '%env(string:OAUTH2_ENCRYPTION_KEY)%'   # (Optional) Change this
+        encryption_key: '%env(string:OAUTH2_ENCRYPTION_KEY)%'
 
     resource_server:
-        public_key: '/home/coeus/projects/review/var/oauth/public.key'                       # Change this
+        public_key: '/home/coeus/projects/review/var/oauth/public.key'
 
     persistence:
         doctrine: null
