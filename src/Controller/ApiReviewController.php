@@ -45,7 +45,7 @@ class ApiReviewController extends AbstractController
     }
 
     /**
-     * @Route("/api/review/{id}/edit", name="api_review_edit", methods={"PUT"})
+     * @Route("/api/review/{id}", name="api_review_edit", methods={"PUT"})
      */
     public function edit(Request $request, Review $review, ReviewHelper $reviewHelper,TokenHelper $tokenHelper): Response
     {
@@ -75,9 +75,12 @@ class ApiReviewController extends AbstractController
     /**
      * @Route("/api/review/{id}", name="api_review_delete", methods={"DELETE"})
      */
-    public function delete(Review $review, DoctrineHelper $doctrineHelper): Response
+    public function delete(
+        Review $review,
+        Request $request,
+    ReviewHelper $reviewHelper
+    ): Response
     {
-        $doctrineHelper->DeleteFromDb($review);
-        return new JsonResponse(['Success' => 'Record Deleted']);
+        return $reviewHelper->delete($review,$request->headers->get('Authorization'));
     }
 }

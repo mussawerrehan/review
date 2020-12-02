@@ -30,17 +30,15 @@ class ReviewController extends AbstractController
     /**
      * @Route("/new", name="review_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request, DoctrineHelper $doctrineHelper): Response
     {
         $review = new Review();
         $form = $this->createForm(ReviewType::class, $review);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($review);
-            $entityManager->flush();
 
+            $doctrineHelper->AddToDb($review);
             return $this->redirectToRoute('review_index');
         }
 
@@ -100,14 +98,11 @@ class ReviewController extends AbstractController
     /**
      * @Route("/{id}", name="review_delete", methods={"DELETE"})
      */
-    public function delete(Request $request, Review $review): Response
+    public function delete(Request $request, Review $review, DoctrineHelper $doctrineHelper): Response
     {
         if ($this->isCsrfTokenValid('delete'.$review->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($review);
-            $entityManager->flush();
+            $doctrineHelper->DeleteFromDb($review);
         }
-
         return $this->redirectToRoute('review_index');
     }
 }

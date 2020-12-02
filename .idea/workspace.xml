@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c506edc4-d12b-4a1c-9376-103c1cd8988b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo/Sblylo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/Sblylo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../e-shop/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../e-shop/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/.gitignore" afterDir="false" />
@@ -16,16 +14,9 @@
       <change beforePath="$PROJECT_DIR$/../e-shop/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../e-shop/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ApiReviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ApiReviewController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ReviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ReviewController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Review.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/ReviewHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ReviewHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/inc/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/inc/navbar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/review/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/review/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,10 +207,14 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="3185" y="233" width="655" height="605" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606477173259">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="2641" y="205" width="468" height="704" key="#com.intellij.ide.util.MemberChooser" timestamp="1606892493326">
+      <screen x="0" y="27" width="3840" height="1053" />
     </state>
-    <state x="2547" y="254" width="655" height="605" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.3840.1053@0.27.3840.1053" timestamp="1606200246192" />
+    <state x="2641" y="205" width="468" height="704" key="#com.intellij.ide.util.MemberChooser/0.27.3840.1053@0.27.3840.1053" timestamp="1606892493326" />
+    <state x="2547" y="254" width="655" height="605" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606831157455">
+      <screen x="0" y="27" width="3840" height="1053" />
+    </state>
+    <state x="2547" y="254" width="655" height="605" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.3840.1053@0.27.3840.1053" timestamp="1606831157455" />
     <state x="1274" y="254" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1606472827207" />
     <state x="3185" y="233" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1606477173259" />
     <state x="2020" y="127" width="1720" height="853" maximized="true" key="DiffContextDialog" timestamp="1606722440691">
