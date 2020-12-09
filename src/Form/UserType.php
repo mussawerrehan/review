@@ -14,12 +14,7 @@ class UserType extends AbstractType
     {
         $builder
             ->add('email', NULL , array(
-                'attr' => array('class' => 'form-control ',
-                'type' => 'email',
-                    'id' => 'email',
-                'pattern' => '.+@globex.com',
-                    'size' => '30',
-                    'placeholder' => 'Example@gmail.com')))
+                'attr' => array('class' => 'form-control ')))
             ->add('password', NULL , array(
                 'attr' => array('class' => 'form-control',
                  'type' =>'password')))

@@ -4,6 +4,7 @@
 namespace App\Service;
 
 
+use App\Repository\ReviewRepository;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
@@ -12,16 +13,37 @@ use Symfony\Component\HttpFoundation\JsonResponse;
  */
 class ReviewHelper
 {
+    /**
+     * @var DoctrineHelper
+     */
     private $doctrineHelper;
 
+    /**
+     * @var TokenHelper
+     */
     private $tokenHelper;
+
+    private $reviewRepository;
+
+    /**
+     * ReviewHelper constructor.
+     * @param DoctrineHelper $doctrineHelper
+     * @param TokenHelper $tokenHelper
+     */
     public function __construct(
         DoctrineHelper $doctrineHelper,
-        TokenHelper $tokenHelper    )
+        TokenHelper $tokenHelper,
+        ReviewRepository $reviewRepository)
     {
         $this->doctrineHelper = $doctrineHelper;
         $this->tokenHelper = $tokenHelper;
+        $this->reviewRepository = $reviewRepository;
     }
+
+    /**
+     * @param $request
+     * @param $review
+     */
     public function updateReview($request , $review)
     {
         if($request->request->get('star'))
@@ -30,8 +52,22 @@ class ReviewHelper
             $review->setDescription($request->request->get('description'));
         $this->doctrineHelper->AddToDb($review);
     }
+    public function findAll($user)
+    {
+        return $this->reviewRepository->findWithAverage($user);
+    }
 
-    public function delete($review,$request)
+    public function findForUser($user)
+    {
+        return $this->reviewRepository->findOrderedListForUser($user);
+    }
+
+    /**
+     * @param $review
+     * @param $request
+     * @return JsonResponse
+     */
+    public function delete($review, $request)
     {
         $user = $this->tokenHelper->getUserFromToken($request);
 

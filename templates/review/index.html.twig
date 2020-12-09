@@ -11,6 +11,7 @@
                 <th>Id</th>
                 <th>Star</th>
                 <th>Description</th>
+                <th>product</th>
                 <th>Status</th>
                 <th>actions</th>
             </tr>
@@ -21,6 +22,7 @@
                 <td>{{ review.id }}</td>
                 <td>{{ review.star }}</td>
                 <td>{{ review.description }}</td>
+                <td>{{ review.product }}</td>
                 <td>
                     <input type="checkbox" {% if review.status %}checked{% endif %}
                            onclick="statusChange({{ review.id }})"></td>

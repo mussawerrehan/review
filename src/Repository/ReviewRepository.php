@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Product;
 use App\Entity\Review;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -35,6 +36,17 @@ class ReviewRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function findOrderedListForUser($user)
+    {
+        return $this->createQueryBuilder('r')
+            ->andWhere('r.user = :val')
+            ->setParameter('val', $user)
+            ->orderBy('r.star', 'ASC')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
 
     /*
     public function findOneBySomeField($value): ?Review

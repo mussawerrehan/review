@@ -6,6 +6,8 @@ trikoder_oauth2:
 
         encryption_key: '%env(string:OAUTH2_ENCRYPTION_KEY)%'
 
+        access_token_ttl:     PT2H
+
     resource_server:
         public_key: '/home/coeus/projects/review/var/oauth/public.key'
 

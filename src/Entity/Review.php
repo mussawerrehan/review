@@ -38,6 +38,12 @@ class Review
      */
     private $status;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Product::class, inversedBy="reviews")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $product;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -87,6 +93,18 @@ class Review
     public function setStatus(?bool $status): self
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+    public function getProduct(): ?Product
+    {
+        return $this->product;
+    }
+
+    public function setProduct(?Product $product): self
+    {
+        $this->product = $product;
 
         return $this;
     }

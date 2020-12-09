@@ -18,6 +18,8 @@ class ReviewType extends AbstractType
                 'attr' => array('class' => 'form-control ')))
             ->add('user', NULL , array(
                 'attr' => array('class' => 'form-control ')))
+            ->add('product', NULL , array(
+                'attr' => array('class' => 'form-control ')))
         ;
     }
 

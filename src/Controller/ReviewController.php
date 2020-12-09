@@ -6,6 +6,8 @@ use App\Entity\Review;
 use App\Form\ReviewType;
 use App\Repository\ReviewRepository;
 use App\Service\DoctrineHelper;
+use App\Service\ReviewHelper;
+use http\Client\Curl\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -20,10 +22,19 @@ class ReviewController extends AbstractController
     /**
      * @Route("/", name="review_index", methods={"GET"})
      */
-    public function index(ReviewRepository $reviewRepository): Response
+    public function index(ReviewHelper $reviewHelper): Response
     {
+        if(!$this->getUser())
+            return $this->redirectToRoute('app_login');
+        if($this->get('security.authorization_checker')->isGranted('ROLE_SUPERADMIN'))
+        {
+            $reviews = $reviewHelper->findAll($this->getUser());
+        }else
+        {
+            $reviews = $reviewHelper->findForUser($this->getUser());
+        }
         return $this->render('review/index.html.twig', [
-            'reviews' => $reviewRepository->findAll(),
+            'reviews' => $reviews,
         ]);
     }
 
