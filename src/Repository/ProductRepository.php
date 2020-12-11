@@ -38,12 +38,6 @@ class ProductRepository extends ServiceEntityRepository
         }
         $query->addSelect('avg(r.star) AS rating');
 
-//        $count = $this->countQuery($q);
-//
-//        $query = $this->getEntityManager()
-//            ->createQuery($query)
-//            ->setHint('knp_paginator.count', $count)
-//        ;
         return $query->getQuery()->getResult();
     }
 

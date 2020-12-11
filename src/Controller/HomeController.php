@@ -22,11 +22,10 @@ class HomeController extends AbstractController
         $query = $productRepository->findWithAverage($request->get('query'));
 
         $pagination = $paginator->paginate(
-            $query, /* query NOT result */
+            $query,
             $request->query->getInt('page', 1), /*page number*/
             5 /*limit per page*/
         );
-//        dd($productRepository->findWithAverage());
         return $this->render('home/productIndex.html.twig', [
             'pagination' =>  $pagination,
             'query' => $request->get('query'),
