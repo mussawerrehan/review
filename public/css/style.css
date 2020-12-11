@@ -49,3 +49,13 @@ table {
     border-collapse: collapse;
     width: 50%;
 }
+
+
+.filterButton {
+    margin-left: 300px;
+}
+
+.dropdownButton {
+    margin-left: 150px;
+    margin-bottom: -50px;
+}

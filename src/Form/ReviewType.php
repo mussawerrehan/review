@@ -13,7 +13,9 @@ class ReviewType extends AbstractType
     {
         $builder
             ->add('star', NULL , array(
-                'attr' => array('class' => 'form-control ')))
+                'attr' => array('class' => 'form-control ',
+                                'min' => '0',
+                                'max' => '5'    )))
             ->add('description', NULL , array(
                 'attr' => array('class' => 'form-control ')))
             ->add('user', NULL , array(

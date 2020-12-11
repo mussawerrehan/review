@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Product;
 use App\Entity\Review;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\QueryBuilder;
 use Doctrine\Persistence\ManagerRegistry;
 use Doctrine\ORM\Query\Expr;
 
@@ -20,33 +21,51 @@ class ProductRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Product::class);
     }
+
+    public function findWithAverage($q)
+    {
+        $em=$this->getEntityManager();
+        $query = $this->createQueryBuilder('p')
+            ->Select(array('p.id','p.name','p.image') )// to make Doctrine actually use the join
+            ->leftJoin('p.reviews', 'r')
+            ->groupBy('p.id')
+            ->orderBy('rating','DESC');
+
+        if($q)
+        {
+            $query->having('avg(r.star) = :val')
+            ->setParameter('val',$q);
+        }
+        $query->addSelect('avg(r.star) AS rating');
+
+//        $count = $this->countQuery($q);
+//
+//        $query = $this->getEntityManager()
+//            ->createQuery($query)
+//            ->setHint('knp_paginator.count', $count)
+//        ;
+        return $query->getQuery()->getResult();
+    }
+
+//
+
     /**
      * @return Product[] Returns an array of Product objects
      */
 
-    public function findWithAverage()
+    public function  findByAverageRating($rating)
     {
-        $em=$this->getEntityManager();
+        $em = $this->getEntityManager();
         $query = $this->createQueryBuilder('p')
             ->Select(array('p.id','p.name','p.image','avg(r.star) AS rating') )// to make Doctrine actually use the join
             ->leftJoin('p.reviews', 'r')
             ->groupBy('p.id')
             ->orderBy('rating','DESC')
+            ->having('avg(r.star) = :val')
+            ->setParameter('val',$rating)
             ->getQuery();
 
         return $query->getResult();
     }
 
-
-    /*
-    public function findOneBySomeField($value): ?Product
-    {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
 }

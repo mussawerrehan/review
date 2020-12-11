@@ -54,7 +54,7 @@ class ReviewHelper
     }
     public function findAll($user)
     {
-        return $this->reviewRepository->findWithAverage($user);
+        return $this->reviewRepository->findOrderedListForUser($user);
     }
 
     public function findForUser($user)

@@ -10,7 +10,7 @@
 
 <div class="example-wrapper">
     {% if app.user%}
-        <h1>Review index</h1>
+        <h1>Review index ({{ pagination.getTotalItemCount }})</h1>
         <table class="table">
         <thead>
         <tr>
@@ -21,7 +21,7 @@
         </tr>
         </thead>
         <tbody>
-        {% for review in reviews %}
+        {% for review in pagination %}
             <tr>
                 <td>{{ review.id }}</td>
                 <td>{{ review.star }}</td>
@@ -35,6 +35,7 @@
         {% endfor %}
         </tbody>
     </table>
+        {{ knp_pagination_render(pagination) }}
     {% endif %}
 </div>
 {% endblock %}

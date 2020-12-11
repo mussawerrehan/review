@@ -10,7 +10,24 @@
 
     <div class="example-wrapper">
         {% if app.user%}
-            <h1>Product index</h1>
+            <div class="row">
+                <h1>Product index ({{ pagination.getTotalItemCount }})</h1>
+                <div class="col-md-offset-10 col-md-2">
+                    <form method="post">
+                        <div class="row">
+                            <select name="query" id="ratingFilter" class="dropdownButton">
+                                <option value="">Chose One</option>
+                                <option value="1">1 Star</option>
+                                <option value="2">2 Star</option>
+                                <option value="3">3 Star</option>
+                                <option value="4">4 Star</option>
+                                <option value="5">5 Star</option>
+                            </select>
+                            <input type="submit" value="Apply Filter" class="btn btn-primary filterButton" />
+                        </div>
+                    </form>
+                </div>
+            </div>
             <table class="table">
                 <thead>
                 <tr>
@@ -21,11 +38,11 @@
                 </tr>
                 </thead>
                 <tbody>
-                {% for product in products %}
+                {% for product in pagination %}
                     <tr>
                         <td>{{ product.id }}</td>
                         <td>{{ product.name }}</td>
-                        <td><img src="{{ asset(product.image) }}"></td>
+                        <td><img src="{{ asset('/uploads/' ~ product.image) }}"></td>
                         <td>{{ product.rating }}</td>
                     </tr>
                 {% else %}
@@ -35,6 +52,9 @@
                 {% endfor %}
                 </tbody>
             </table>
+            <div class="navigation">
+                {{ knp_pagination_render(pagination) }}
+            </div>
         {% endif %}
     </div>
 {% endblock %}

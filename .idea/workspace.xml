@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c506edc4-d12b-4a1c-9376-103c1cd8988b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/home/productIndex.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/knp_paginator.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/RatingFilterType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo/Sblylo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/Sblylo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../e-shop/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../e-shop/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/.gitignore" afterDir="false" />
@@ -14,18 +15,22 @@
       <change beforePath="$PROJECT_DIR$/../e-shop/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/config/services.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../e-shop/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../e-shop/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/review.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/review.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/trikoder_oauth2.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/trikoder_oauth2.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ReviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ReviewController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Review.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Review.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/ReviewType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ReviewType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProductRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/ReviewRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ReviewRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service/ReviewHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ReviewHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/review/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/review/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/productIndex.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/productIndex.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,6 +172,8 @@
       <path value="$PROJECT_DIR$/vendor/league/event" />
       <path value="$PROJECT_DIR$/vendor/league/oauth2-server" />
       <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kVZz3ftEz3dzcIdh81HkcfXKgh" />
@@ -213,7 +220,8 @@
       <workItem from="1606980668362" duration="10857000" />
       <workItem from="1607348143759" duration="1121000" />
       <workItem from="1607453774674" duration="14866000" />
-      <workItem from="1607550519035" duration="569000" />
+      <workItem from="1607550519035" duration="10027000" />
+      <workItem from="1607622498271" duration="13416000" />
     </task>
     <servers />
   </component>
