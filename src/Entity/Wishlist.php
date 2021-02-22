@@ -23,7 +23,7 @@ class Wishlist
     private $name;
 
     /**
-     * @ORM\ManyToOne(targetEntity=user::class, inversedBy="wishlists")
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="wishlists")
      */
     private $user;
 
@@ -54,5 +54,9 @@ class Wishlist
         $this->user = $user;
 
         return $this;
+    }
+
+    public function __toString() {
+        return $this->name;
     }
 }

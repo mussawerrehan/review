@@ -14,30 +14,11 @@
       <change beforePath="$PROJECT_DIR$/../e-shop/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../e-shop/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ApiReviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ApiReviewController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ReviewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ReviewController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Product.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Review.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RatingFilterType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ReviewType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ProductRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ReviewRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ReviewHelper.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Item.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/WhishlistItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/WhishlistItem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Wishlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Wishlist.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/productIndex.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/produst/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/review/_delete_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/review/_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/review/edit.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/review/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/review/new.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/review/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/inc/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/inc/navbar.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,6 +178,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Service" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -236,7 +218,7 @@
       <workItem from="1608533231733" duration="32000" />
       <workItem from="1610529934429" duration="625000" />
       <workItem from="1610617858177" duration="42000" />
-      <workItem from="1614022621173" duration="3252000" />
+      <workItem from="1614022621173" duration="4749000" />
     </task>
     <servers />
   </component>

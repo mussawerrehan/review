@@ -18,12 +18,12 @@ class WhishlistItem
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity=wishlist::class)
+     * @ORM\ManyToOne(targetEntity=Wishlist::class)
      */
     private $wishlist;
 
     /**
-     * @ORM\ManyToOne(targetEntity=item::class, inversedBy="whishlistItems")
+     * @ORM\ManyToOne(targetEntity=Item::class, inversedBy="whishlistItems")
      * @ORM\JoinColumn(nullable=false)
      */
     private $item;
