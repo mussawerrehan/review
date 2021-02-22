@@ -17,18 +17,19 @@ class HomeController extends AbstractController
     /**
      * @Route("/home", name="home")
      */
-    public function index(Request $request,ProductRepository $productRepository,PaginatorInterface $paginator): Response
+    public function index(): Response
     {
-        $query = $productRepository->findWithAverage($request->get('query'));
-
-        $pagination = $paginator->paginate(
-            $query,
-            $request->query->getInt('page', 1), /*page number*/
-            5 /*limit per page*/
-        );
-        return $this->render('home/productIndex.html.twig', [
-            'pagination' =>  $pagination,
-            'query' => $request->get('query'),
-        ]);
+//        $query = $productRepository->findWithAverage($request->get('query'));
+//
+//        $pagination = $paginator->paginate(
+//            $query,
+//            $request->query->getInt('page', 1), /*page number*/
+//            5 /*limit per page*/
+//        );
+//        return $this->render('home/productIndex.html.twig', [
+//            'pagination' =>  $pagination,
+//            'query' => $request->get('query'),
+//        ]);
+        return $this->render('home/index.html.twig');
     }
 }

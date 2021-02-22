@@ -37,13 +37,13 @@ class User implements UserInterface
     private $password;
 
     /**
-     * @ORM\OneToMany(targetEntity=Review::class, mappedBy="user", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity=Wishlist::class, mappedBy="user")
      */
-    private $reviews;
+    private $wishlists;
 
     public function __construct()
     {
-        $this->reviews = new ArrayCollection();
+        $this->wishlists = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -124,38 +124,38 @@ class User implements UserInterface
         // $this->plainPassword = null;
     }
 
-    /**
-     * @return Collection|Review[]
-     */
-    public function getReviews(): Collection
+    public function __toString()
     {
-        return $this->reviews;
+        return $this->email;
     }
 
-    public function addReview(Review $review): self
+    /**
+     * @return Collection|Wishlist[]
+     */
+    public function getWishlists(): Collection
     {
-        if (!$this->reviews->contains($review)) {
-            $this->reviews[] = $review;
-            $review->setUser($this);
+        return $this->wishlists;
+    }
+
+    public function addWishlist(Wishlist $wishlist): self
+    {
+        if (!$this->wishlists->contains($wishlist)) {
+            $this->wishlists[] = $wishlist;
+            $wishlist->setUser($this);
         }
 
         return $this;
     }
 
-    public function removeReview(Review $review): self
+    public function removeWishlist(Wishlist $wishlist): self
     {
-        if ($this->reviews->removeElement($review)) {
+        if ($this->wishlists->removeElement($wishlist)) {
             // set the owning side to null (unless already changed)
-            if ($review->getUser() === $this) {
-                $review->setUser(null);
+            if ($wishlist->getUser() === $this) {
+                $wishlist->setUser(null);
             }
         }
 
         return $this;
-    }
-
-    public function __toString()
-    {
-        return $this->email;
     }
 }
