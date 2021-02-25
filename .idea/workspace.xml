@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c506edc4-d12b-4a1c-9376-103c1cd8988b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../demo/Sblylo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/Sblylo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Item.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/WhishlistItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/WhishlistItem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Wishlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Wishlist.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/inc/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/inc/navbar.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +202,9 @@
       <workItem from="1608533231733" duration="32000" />
       <workItem from="1610529934429" duration="625000" />
       <workItem from="1610617858177" duration="42000" />
-      <workItem from="1614022621173" duration="4749000" />
+      <workItem from="1614022621173" duration="5285000" />
+      <workItem from="1614065977683" duration="581000" />
+      <workItem from="1614284248871" duration="120000" />
     </task>
     <servers />
   </component>
