@@ -17,11 +17,10 @@ security:
         api_token:
             pattern: ^/token$
             security: false
-        api:
-            pattern: ^/api
-            security: true
-            stateless: true
-            oauth2: true
+#        api:
+#            pattern: ^/api
+#            security: true
+#            stateless: true
 
         main:
             anonymous: lazy
@@ -47,7 +46,7 @@ security:
     access_control:
 #        - { path: ^/login, roles: SI_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/home, roles: IS_AUTHENTICATED_FULLY }
-        - { path: ^/api, roles: ROLE_USER }
+        - { path: /api/doc, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/user, roles: ROLE_SUPERADMIN }
         - { path: ^/review, roles: ROLE_SUPERADMIN }
         - { path: ^/authorize, roles: IS_AUTHENTICATED_REMEMBERED }

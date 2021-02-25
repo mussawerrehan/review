@@ -623,5 +623,8 @@
     },
     "willdurand/negotiation": {
         "version": "v2.3.1"
+    },
+    "zircote/swagger-php": {
+        "version": "3.1.0"
     }
 }
