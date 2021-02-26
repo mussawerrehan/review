@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}WhishlistItem index{% endblock %}
+
+{% block body %}
+    <h1>WhishlistItem index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for whishlist_item in whishlist_items %}
+            <tr>
+                <td>{{ whishlist_item.id }}</td>
+                <td>
+                    <a href="{{ path('whishlist_item_show', {'id': whishlist_item.id}) }}">show</a>
+                    <a href="{{ path('whishlist_item_edit', {'id': whishlist_item.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('whishlist_item_new') }}">Create new</a>
+{% endblock %}

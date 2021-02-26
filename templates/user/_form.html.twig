@@ -1,0 +1,9 @@
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <select class="form-control" name="roles" id="nature">
+        <option value ="ROLE_ADMIN">Admin</option>
+        <option value ="ROLE_SUPERADMIN">SuperAdmin</option>
+        <option value ="ROLE_USER">User</option>
+    </select>
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

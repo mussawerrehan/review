@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c506edc4-d12b-4a1c-9376-103c1cd8988b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../demo/Sblylo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/Sblylo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../e-shop/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../e-shop/templates/base.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/nelmio_api_doc.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/review.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/review.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ApiReviewController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/inc/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/inc/navbar.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +24,18 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -127,6 +138,30 @@
       <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/rest-bundle" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/jsonp-callback-validator" />
+      <path value="$PROJECT_DIR$/vendor/willdurand/negotiation" />
+      <path value="$PROJECT_DIR$/vendor/jms/serializer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/jms/serializer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-server-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/templating" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/nyholm/psr7" />
+      <path value="$PROJECT_DIR$/vendor/trikoder/oauth2-bundle" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/league/event" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth2-server" />
+      <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/zircote/swagger-php" />
+      <path value="$PROJECT_DIR$/vendor/nelmio/api-doc-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kVZz3ftEz3dzcIdh81HkcfXKgh" />
@@ -138,8 +173,21 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Service" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Service" />
+      <recent name="$PROJECT_DIR$/config/oauth" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Service" />
+      <recent name="$PROJECT_DIR$/var" />
+      <recent name="$PROJECT_DIR$/src/Coeus/TestBundle" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -150,11 +198,45 @@
       <option name="presentableId" value="Default" />
       <updated>1605787979077</updated>
       <workItem from="1605787980985" duration="2978000" />
-      <workItem from="1605791667423" duration="1082000" />
+      <workItem from="1605791667423" duration="3519000" />
+      <workItem from="1605854185013" duration="5893000" />
+      <workItem from="1606122632519" duration="7958000" />
+      <workItem from="1606215277465" duration="7216000" />
+      <workItem from="1606289295239" duration="25487000" />
+      <workItem from="1606462003789" duration="11268000" />
+      <workItem from="1606717071402" duration="15168000" />
+      <workItem from="1606893960838" duration="3000" />
+      <workItem from="1606980668362" duration="10857000" />
+      <workItem from="1607348143759" duration="1121000" />
+      <workItem from="1607453774674" duration="14866000" />
+      <workItem from="1607550519035" duration="10027000" />
+      <workItem from="1607622498271" duration="17130000" />
+      <workItem from="1607704239208" duration="774000" />
+      <workItem from="1608533231733" duration="32000" />
+      <workItem from="1610529934429" duration="625000" />
+      <workItem from="1610617858177" duration="42000" />
+      <workItem from="1614022621173" duration="5285000" />
+      <workItem from="1614065977683" duration="581000" />
+      <workItem from="1614284248871" duration="6981000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/src/Controller/ApiItemsController.php</url>
+          <line>44</line>
+          <properties>
+            <option name="className" value="\App\Controller\ApiItemsController" />
+            <option name="methodName" value="edit" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

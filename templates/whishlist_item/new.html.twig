@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New WhishlistItem{% endblock %}
+
+{% block body %}
+    <h1>Create new WhishlistItem</h1>
+
+    {{ include('whishlist_item/_form.html.twig') }}
+
+    <a href="{{ path('whishlist_item_index') }}">back to list</a>
+{% endblock %}
