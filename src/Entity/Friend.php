@@ -34,6 +34,14 @@ class Friend
      */
     private $type;
 
+    /**
+     * @return int|null
+     */
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
     public function getFirstUserId(): ?User
     {
         return $this->first_user_id;

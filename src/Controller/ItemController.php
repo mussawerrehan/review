@@ -39,7 +39,7 @@ class ItemController extends AbstractController
             $entityManager->persist($item);
             $entityManager->flush();
 
-            return $this->redirectToRoute('item_index');
+                return $this->redirectToRoute('item_index');
         }
 
         return $this->render('item/new.html.twig', [
