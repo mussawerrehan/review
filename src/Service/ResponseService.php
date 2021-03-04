@@ -2,8 +2,8 @@
 
 namespace App\Service;
 
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * Class ResponseService
@@ -29,7 +29,7 @@ class ResponseService
      * @param string $message
      * @return array
      */
-    public function getErrorResponse(int $statusCode, string $message): array
+    public function getErrorResponse(int $statusCode, string $message): Response
     {
         $errorResponse = [
             'error' => [
@@ -37,7 +37,10 @@ class ResponseService
             ]
         ];
 
-        return ['response' => $errorResponse, 'status_code' => $statusCode];
+        return new JsonResponse([
+            'response' => $errorResponse,
+            'status_code' => $statusCode
+        ]);
     }
 
 
@@ -51,9 +54,12 @@ class ResponseService
         string $message,
         int $statusCode = Response::HTTP_OK,
         array $responseAccepted = []
-    ): array
+    ): Response
     {
         $responseAccepted['message'] = $message;
-        return ['response' => $responseAccepted, 'status_code' => $statusCode];
+        return new JsonResponse([
+            'response' => $responseAccepted,
+            'status_code' => $statusCode
+        ]);
     }
 }

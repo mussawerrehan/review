@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
 class ResponseHelper
 {
-    public function sendJsonResponse($data) {
+    public function sendJsonResponse($data, $status=null) {
         $serializer = SerializerBuilder::create()->build();
         $response = $serializer->serialize($data, 'json');
         $response = json_decode($response);

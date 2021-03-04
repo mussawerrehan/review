@@ -32,6 +32,7 @@ class itemService
         $item->setName($data['name']);
 
         $this->doctrineHelper->AddToDb($item);
+        return $item;
     }
 
 }
