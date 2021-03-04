@@ -12,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Item
 {
+    const MAX_NAME_LENGTH = 255;
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
