@@ -477,6 +477,9 @@
     "symfony/property-info": {
         "version": "v4.4.16"
     },
+    "symfony/proxy-manager-bridge": {
+        "version": "v4.4.20"
+    },
     "symfony/psr-http-message-bridge": {
         "version": "v2.0.2"
     },
