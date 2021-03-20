@@ -9,12 +9,12 @@ use App\Repository\ItemRepository;
 use App\Service\itemService;
 use App\Service\ItemValidationService;
 use App\Service\ResponseHelper;
-use FOS\RestBundle\Controller\AbstractFOSRestController;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ApiItemsController extends AbstractFOSRestController
+class ApiItemsController extends AbstractController
 {
     /**
      *@Route(methods={"GET"}, path="/api/item", name="api_items")
@@ -48,7 +48,7 @@ class ApiItemsController extends AbstractFOSRestController
                     Response::HTTP_UNPROCESSABLE_ENTITY,
                     "invalid_json_message"
                 );
-                return $this->view($response['response'], $response['status_code']);
+                return $response;
             }
 
             if (empty(trim($data['name'])) ) {
@@ -56,7 +56,7 @@ class ApiItemsController extends AbstractFOSRestController
                     Response::HTTP_UNPROCESSABLE_ENTITY,
                     "Name is required"
                 );
-                return $this->view($response['response'], $response['status_code']);
+                return $response;
             }
             $errors = $itemValidationService->validatePostItemRequest($data);
             if (0 !== count($errors)) {
@@ -64,7 +64,7 @@ class ApiItemsController extends AbstractFOSRestController
                     Response::HTTP_UNPROCESSABLE_ENTITY,
                     $errors[0]->getMessage()
                 );
-                return $this->view($response['response'], $response['status_code']);
+                return $response;
             }
 
             $item = $itemService->createItem($data);
@@ -76,7 +76,7 @@ class ApiItemsController extends AbstractFOSRestController
                 "server.error_message"
             );
 
-            return $this->view($response['response'], $response['status_code']);
+            return $response;
         }
     }
 

@@ -9,6 +9,9 @@
 /var/cache
 /vendor/
 /.env
+.env
+.env.test
+
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
