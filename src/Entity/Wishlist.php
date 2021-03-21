@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\WishlistRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -26,6 +28,16 @@ class Wishlist
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="wishlists")
      */
     private $user;
+
+    /**
+     * @ORM\OneToMany(targetEntity=WishlistFriend::class, mappedBy="wishlist")
+     */
+    private $wishlistFriends;
+
+    public function __construct()
+    {
+        $this->wishlistFriends = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -58,5 +70,35 @@ class Wishlist
 
     public function __toString() {
         return $this->name;
+    }
+
+    /**
+     * @return Collection|WishlistFriend[]
+     */
+    public function getWishlistFriends(): Collection
+    {
+        return $this->wishlistFriends;
+    }
+
+    public function addWishlistFriend(WishlistFriend $wishlistFriend): self
+    {
+        if (!$this->wishlistFriends->contains($wishlistFriend)) {
+            $this->wishlistFriends[] = $wishlistFriend;
+            $wishlistFriend->setWishlist($this);
+        }
+
+        return $this;
+    }
+
+    public function removeWishlistFriend(WishlistFriend $wishlistFriend): self
+    {
+        if ($this->wishlistFriends->removeElement($wishlistFriend)) {
+            // set the owning side to null (unless already changed)
+            if ($wishlistFriend->getWishlist() === $this) {
+                $wishlistFriend->setWishlist(null);
+            }
+        }
+
+        return $this;
     }
 }

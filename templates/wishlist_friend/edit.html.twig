@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit WishlistFriend{% endblock %}
+
+{% block body %}
+    <h1>Edit WishlistFriend</h1>
+
+    {{ include('wishlist_friend/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('wishlist_friend_index') }}">back to list</a>
+
+    {{ include('wishlist_friend/_delete_form.html.twig') }}
+{% endblock %}

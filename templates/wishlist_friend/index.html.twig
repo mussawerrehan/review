@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}WishlistFriend index{% endblock %}
+
+{% block body %}
+    <h1>WishlistFriend index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for wishlist_friend in wishlist_friends %}
+            <tr>
+                <td>{{ wishlist_friend.id }}</td>
+                <td>
+                    <a href="{{ path('wishlist_friend_show', {'id': wishlist_friend.id}) }}">show</a>
+                    <a href="{{ path('wishlist_friend_edit', {'id': wishlist_friend.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('wishlist_friend_new') }}">Create new</a>
+{% endblock %}

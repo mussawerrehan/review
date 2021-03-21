@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New WishlistFriend{% endblock %}
+
+{% block body %}
+    <h1>Create new WishlistFriend</h1>
+
+    {{ include('wishlist_friend/_form.html.twig') }}
+
+    <a href="{{ path('wishlist_friend_index') }}">back to list</a>
+{% endblock %}

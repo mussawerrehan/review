@@ -46,10 +46,16 @@ class User implements UserInterface
      */
     private $friends;
 
+    /**
+     * @ORM\OneToMany(targetEntity=WishlistFriend::class, mappedBy="friend")
+     */
+    private $wishlistFriends;
+
     public function __construct()
     {
         $this->wishlists = new ArrayCollection();
         $this->friends = new ArrayCollection();
+        $this->wishlistFriends = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -189,6 +195,36 @@ class User implements UserInterface
             // set the owning side to null (unless already changed)
             if ($friend->getFirstUserId() === $this) {
                 $friend->setFirstUserId(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|WishlistFriend[]
+     */
+    public function getWishlistFriends(): Collection
+    {
+        return $this->wishlistFriends;
+    }
+
+    public function addWishlistFriend(WishlistFriend $wishlistFriend): self
+    {
+        if (!$this->wishlistFriends->contains($wishlistFriend)) {
+            $this->wishlistFriends[] = $wishlistFriend;
+            $wishlistFriend->setFriend($this);
+        }
+
+        return $this;
+    }
+
+    public function removeWishlistFriend(WishlistFriend $wishlistFriend): self
+    {
+        if ($this->wishlistFriends->removeElement($wishlistFriend)) {
+            // set the owning side to null (unless already changed)
+            if ($wishlistFriend->getFriend() === $this) {
+                $wishlistFriend->setFriend(null);
             }
         }
 

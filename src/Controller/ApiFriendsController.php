@@ -42,7 +42,8 @@ class ApiFriendsController extends AbstractController
         ResponseHelper $responseHelper,
         DoctrineHelper $doctrineHelper,
         TokenHelper $tokenHelper,
-        UserRepository $userRepository
+        UserRepository $userRepository,
+        FriendRepository $friendRepository
     )
     {
         try {
@@ -68,6 +69,14 @@ class ApiFriendsController extends AbstractController
                 $response = $responseService->getErrorResponse(
                     Response::HTTP_UNPROCESSABLE_ENTITY,
                     "friend does not exist"
+                );
+                return $response;
+            }
+            $friendRequest = $friendRepository->findOneBy(['second_user_id' => $data['friend_id']]);
+            if (!$friendRequest) {
+                $response = $responseService->getErrorResponse(
+                    Response::HTTP_UNPROCESSABLE_ENTITY,
+                    "friend request not found"
                 );
                 return $response;
             }
@@ -126,10 +135,18 @@ class ApiFriendsController extends AbstractController
                 return $response;
             }
             $friendRequest = $friendRepository->findOneBy(['first_user_id' => $data['friend_id']]);
-            if (!$secondUser) {
+            if (!$friendRequest) {
                 $response = $responseService->getErrorResponse(
                     Response::HTTP_UNPROCESSABLE_ENTITY,
                     "friend request not found"
+                );
+                return $response;
+            }
+            if($friendRequest->getType() == 'Friend')
+            {
+                $response = $responseService->getErrorResponse(
+                    Response::HTTP_UNPROCESSABLE_ENTITY,
+                    "friend request already accepted"
                 );
                 return $response;
             }
