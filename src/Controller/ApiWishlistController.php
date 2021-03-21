@@ -73,4 +73,14 @@ class ApiWishlistController extends AbstractController
             return $response;
         }
     }
+    /**
+     * @Route(methods={"GET"}, path="/api/wishlist/{id}", name="api_wishlists")
+     */
+    public function fetchOne
+    (
+        Wishlist $wishlist,
+        ResponseHelper $responseHelper
+    ) {
+        return $responseHelper->sendJsonResponse($wishlist);
+    }
 }
