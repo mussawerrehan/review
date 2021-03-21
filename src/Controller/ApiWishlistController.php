@@ -83,4 +83,25 @@ class ApiWishlistController extends AbstractController
     ) {
         return $responseHelper->sendJsonResponse($wishlist);
     }
+    /**
+     * @Route(methods={"DELETE"}, path="/api/wishlist/{id}", name="api_item_delete")
+     */
+    public function delete(Wishlist $wishlist,ResponseService $responseService)
+    {
+        try {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($wishlist);
+            $entityManager->flush();
+            return $responseService->getSuccessMessageResponse(
+                "Item Deleted Successfully",
+                Response::HTTP_CREATED
+            );
+        }catch (\Exception $exception) {
+            return $responseService->getErrorResponse(
+                Response::HTTP_INTERNAL_SERVER_ERROR,
+                "server.error_message"
+            );
+        }
+
+    }
 }
