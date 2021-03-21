@@ -20,8 +20,8 @@ class ApiUsersController extends AbstractController
      */
     public function index(UserRepository $userRepository,ResponseHelper $responseHelper)
     {
-        $review = $userRepository->findAll();
-        return $responseHelper->sendJsonResponse($review);
+        $users = $userRepository->findAll();
+        return $responseHelper->sendJsonResponse($users);
     }
     /**
      * @Route(methods={"POST"}, path="/api/users", name="api_users_new")
