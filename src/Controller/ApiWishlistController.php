@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ApiWishlistController extends AbstractController
 {
     /**
-     * @Route(methods={"GET"}, path="/api/wishlist", name="api_wishlists")
+     * @Route(methods={"GET"}, path="/api/wishlist", name="api_wishlist_get")
      */
     public function index
     (
